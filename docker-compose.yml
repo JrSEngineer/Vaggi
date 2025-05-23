@@ -1,4 +1,14 @@
 services:
+  database:
+    container_name: database
+    image: postgres:14
+    ports:
+      -  5432:5423
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PG_DATABASE: vaggi_db
+
   api:
     container_name: api
     image: ${DOCKER_REGISTRY-}api

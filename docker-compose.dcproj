@@ -8,7 +8,7 @@
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger/index.html</DockerServiceUrl>
     <DockerServiceName>api</DockerServiceName>
-    <DockerComposeServiceName>vaggi-api</DockerComposeServiceName>
+    <DockerComposeProjectName>vaggi</DockerComposeProjectName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
