@@ -1,7 +1,11 @@
 using Amazon;
 using Amazon.Runtime;
 using Amazon.S3;
+using Application.Interfaces.Repositories;
+using Infra.Services.Security;
+using Infra.Services.TokenService;
 using Infra.Setup;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -114,6 +118,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
        });
 
 builder.Services.Configure<S3Setup>(builder.Configuration.GetSection("S3Setup"));
+builder.Services.AddScoped<TokenService>();
+builder.Services.AddSingleton<HashService>();
+
+builder.Services.AddScoped<ICompaniesRepository, CompaniesRepository>();
+builder.Services.AddScoped<ICandidatesRepository, CandidatesRepository>();
+builder.Services.AddScoped<IVacanciesRepository, VacanciesRepository>();
+builder.Services.AddScoped<ISecurityRepository, SecurityRepository>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
