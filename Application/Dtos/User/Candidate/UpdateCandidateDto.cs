@@ -2,12 +2,8 @@
 
 namespace Application.Dtos.User.Candidate;
 
-public sealed record CandidateDto(
-    Guid Id,
-    AccountType AccountType,
+public sealed record UpdateCandidateDto(
     ProfileType ProfileType,
-    string FullName,
-    string Document,
     string Email,
     string Phone,
     string? ProfileImage
