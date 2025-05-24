@@ -1,7 +1,7 @@
 ﻿using Domain.Enums;
 
 namespace Application.Dtos.User.Candidate;
-internal sealed record CandidateDto(
+public sealed record CandidateDto(
     Guid Id,
     AccountType AccountType,
     string FullName,

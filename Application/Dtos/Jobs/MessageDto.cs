@@ -1,6 +1,6 @@
 ﻿namespace Application.Dtos.Jobs;
 
-public record MessageDto(
+public sealed record MessageDto(
     Guid Id,
     Guid SenderId,
     Guid ReceiverId,

@@ -1,6 +1,6 @@
 ﻿namespace Application.Dtos.Jobs;
 
-public record InterviewDto(
+public sealed record InterviewDto(
     Guid Id,
     string Name,
     string Publisher,

@@ -2,7 +2,7 @@
 
 namespace Application.Dtos.User.Company;
 
-public record CompanyDto(
+public sealed record CompanyDto(
     Guid Id,
     AccountType AccountType,
     string FullName,

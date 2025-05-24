@@ -1,6 +1,6 @@
 ﻿namespace Application.Dtos.User.Company;
 
-internal sealed record NewCompanyDto(
+public sealed record NewCompanyDto(
     string FullName,
     string Document,
     string Email,

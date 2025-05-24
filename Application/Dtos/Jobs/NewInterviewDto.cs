@@ -1,6 +1,6 @@
 ﻿namespace Application.Dtos.Jobs;
 
-internal sealed record  NewInterviewDto(
+public sealed record  NewInterviewDto(
     string Name,
     string Publisher,
     string CompanyField,

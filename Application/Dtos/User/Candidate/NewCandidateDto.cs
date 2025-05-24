@@ -1,6 +1,6 @@
 ﻿namespace Application.Dtos.User.Candidate;
 
-internal sealed record NewCandidateDto(
+public sealed record NewCandidateDto(
     string FullName,
     string Document,
     string Email,

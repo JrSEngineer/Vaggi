@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 
 namespace Application.Dtos.Jobs;
 
-public record ApplicationDto(
+public sealed record ApplicationDto(
     Guid Id,
     CompanyDto Company,
     ReadOnlyCollection<VacancyMessageDto> Messages

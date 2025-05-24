@@ -4,7 +4,7 @@ using Domain.Enums;
 
 namespace Application.Dtos.Jobs;
 
-internal sealed record VacancyDto(
+public sealed record VacancyDto(
     Guid Id,
     CompanyDto Company,
     string Name,
