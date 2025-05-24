@@ -7,5 +7,16 @@ public class AccountCredential
     public DateTime LastLogin { get; set; }
     public string Email { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
+    public string RefreshToken { get; set; } = string.Empty;
     public string? SecurityCode { get; set; }
+
+    public void ModifyPassword(string newPasswrd)
+    {
+        Password = newPasswrd;
+    }
+
+    public void SetRefreshToken(string refreshToken)
+    {
+        RefreshToken = refreshToken;
+    }
 }

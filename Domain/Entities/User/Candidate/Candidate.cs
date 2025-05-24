@@ -8,6 +8,6 @@ public class Candidate : BaseEntity
 {
     public ProfileType ProfileType { get; set; } = ProfileType.Basic;
 
-    private readonly List<Application> _Applications = new List<Application>();
-    public IReadOnlyCollection<Application> Applications => _Applications;
+    private readonly List<VacancyApplication> _Applications = new List<VacancyApplication>();
+    public IReadOnlyCollection<VacancyApplication> Applications => _Applications;
 }

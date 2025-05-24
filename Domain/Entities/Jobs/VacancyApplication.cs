@@ -2,7 +2,7 @@
 
 namespace Domain.Entities.Jobs;
 
-public class Application
+public class VacancyApplication
 {
     public Guid Id { get; set; }
     public Guid CandidateId { get; set; }
