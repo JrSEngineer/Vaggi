@@ -3,19 +3,23 @@ services:
     container_name: database
     image: postgres:14
     ports:
-      -  5432:5423
+      -  5432:5432
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      PG_DATABASE: vaggi_db
-
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=vaggi_db
+    volumes:
+      - pg_volume:/var/lib/postgresql/data
+  
   api:
     container_name: api
-    image: ${DOCKER_REGISTRY-}api
     build:
       context: .
       dockerfile: Api/Dockerfile
-
+      
     ports:
       - 5050:5050
       - 5051:5051
+
+volumes:
+  pg_volume:
