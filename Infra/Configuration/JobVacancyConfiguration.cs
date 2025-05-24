@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Vaggi.Domain.Configuration;
 
-public class JobVacancyConfiguration : IEntityTypeConfiguration<Vacancy>
+internal class JobVacancyConfiguration : IEntityTypeConfiguration<Vacancy>
 {
     public void Configure(EntityTypeBuilder<Vacancy> builder)
     {

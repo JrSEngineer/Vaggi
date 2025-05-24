@@ -6,15 +6,14 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Vaggi.Domain.Configuration;
 
-public class CompanyConfiguration : IEntityTypeConfiguration<Company>
+internal class CompanyConfiguration : IEntityTypeConfiguration<Company>
 {
     public void Configure(EntityTypeBuilder<Company> builder)
     {
-        builder.HasKey(c => c.Id);
-
         builder.HasOne(c => c.Credential)
                .WithOne()
-               .HasForeignKey<AccountCredential>(cr => cr.AccountId);
+               .HasForeignKey<AccountCredential>(cr => cr.AccountId)
+               .IsRequired(false);
 
         builder.HasMany(c => c.Vacancies)
                .WithOne()

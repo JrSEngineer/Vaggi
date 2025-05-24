@@ -28,7 +28,7 @@ public class AppDbContext : DbContext
     public DbSet<Candidate> Candidate { get; set; }
     public DbSet<Company> Company { get; set; }
     public DbSet<Vacancy> Vacancy { get; set; }
-    public DbSet<Application> Application { get; set; }
+    public DbSet<VacancyApplication> Application { get; set; }
     public DbSet<Interview> Interview { get; set; }
     public DbSet<Message> Message { get; set; }
 }

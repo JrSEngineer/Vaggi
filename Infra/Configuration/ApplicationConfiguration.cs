@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Vaggi.Domain.Configuration;
 
-public class ApplicationConfiguration : IEntityTypeConfiguration<Application>
+internal class ApplicationConfiguration : IEntityTypeConfiguration<VacancyApplication>
 {
-    public void Configure(EntityTypeBuilder<Application> builder)
+    public void Configure(EntityTypeBuilder<VacancyApplication> builder)
     {
         builder.HasKey(vA => vA.Id);
 
