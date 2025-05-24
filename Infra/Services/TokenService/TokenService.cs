@@ -48,7 +48,7 @@ public class TokenService(IConfiguration configuration)
 
         while (counter < idSection.Count())
         {
-            var randomNumber = new byte[24];
+            var randomNumber = new byte[16];
             var randomGenerator = RandomNumberGenerator.Create();
             randomGenerator.GetBytes(randomNumber);
             string convertedNumber = Convert.ToBase64String(randomNumber);
